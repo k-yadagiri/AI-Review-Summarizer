@@ -1,7 +1,7 @@
 # AI Review Summarizer
 
 ## Run in Google Colab
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](PASTE_YOUR_COLAB_LINK_HERE)
+[![Open In Colab](https://colab.research.google.com/drive/1Q06ilwK-Ic9d_2L1vBj0H6l66c8kRzVy?usp=sharing)](PASTE_YOUR_COLAB_LINK_HERE)
 
 ---
 
