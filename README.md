@@ -1,5 +1,10 @@
 # AI Review Summarizer
 
+## Run in Google Colab
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](PASTE_YOUR_COLAB_LINK_HERE)
+
+---
+
 ## Problem
 Customers often read multiple product reviews, making it difficult to quickly understand overall sentiment and key insights. This project converts raw reviews into structured insights.
 
@@ -17,7 +22,7 @@ This project builds an AI-powered pipeline that:
 ## Features
 - Structured JSON output
 - Schema validation
-- Safe JSON parsing
+- Safe JSON parsing (failure handling)
 - Confidence-based uncertainty handling
 - Multilingual support (English + Arabic)
 - Evaluation with multiple test cases
@@ -67,7 +72,7 @@ review_summarizer_ai.ipynb
 
 ## Evaluation
 
-Tested on 10 cases:
+Tested on 10 diverse test cases:
 - Positive, Negative, Mixed, Neutral
 - Multilingual (Arabic)
 - Uncertain inputs
@@ -79,6 +84,27 @@ Tested on 10 cases:
 - High confidence for clear inputs
 - Lower confidence for ambiguous inputs
 - Correct handling of mixed sentiment
+
+---
+
+## Example: Uncertain Input
+
+Input:
+"I don't know about this product"
+
+Output:
+- Sentiment: Neutral  
+- Confidence: Low (0.2–0.3)
+
+---
+
+## Multilingual Example
+
+Input:
+"المنتج جيد جدا"
+
+Output:
+- Correct sentiment detected
 
 ---
 
@@ -97,25 +123,14 @@ Tested on 10 cases:
 
 ---
 
-## Future Improvements
-- Add Arabic output generation
-- Improve confidence calibration
-- Use real datasets
-- Build UI (Streamlit)
-
----
-
 ## Tooling
-- Groq API for LLM inference
-- ChatGPT for prompt iteration and debugging
+- Groq API with LLaMA 3.1 model for inference
+- Prompt engineering for structured JSON output
+- ChatGPT for debugging and prompt refinement
+- Evaluation loop for testing reliability
 
 ---
 
 ## Notes
-- Add your API key before running
-- Uses safe parsing to handle invalid JSON
-
- ## Run on Google Colab
-
-- You can open and run this project directly in Colab:
-- [Open in Colab](https://colab.research.google.com/drive/1Q06ilwK-Ic9d_2L1vBj0H6l66c8kRzVy?usp=sharing)
+- Add your GROQ_API_KEY before running
+- Uses safe parsing to handle invalid JSON outputs
