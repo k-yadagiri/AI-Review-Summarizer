@@ -1,7 +1,14 @@
 # AI Review Summarizer
 
+## Summary
+
+Built an AI-powered system that converts product reviews into structured insights including summary, pros, cons, sentiment, and confidence score. Designed for quick understanding of customer feedback. Uses LLM-based processing with validation and evaluation to ensure reliable output.
+
+---
+
 ## Run in Google Colab
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Q06ilwK-Ic9d_2L1vBj0H6l66c8kRzVy?usp=sharing)
+
 ---
 
 ## Problem
@@ -114,11 +121,46 @@ Output:
 
 ---
 
+## Evals
+
+Tested on:
+- Positive, Negative, Mixed, Neutral cases  
+- Multilingual inputs  
+- Uncertain inputs  
+
+Result:
+- Accuracy: 10/10  
+
+Failure cases:
+- Generic summaries in some cases  
+- Confidence calibration can improve  
+
+---
+
 ## Tradeoffs
-- Small evaluation dataset (manually created)
-- Output depends on model behavior
-- No UI (focused on core AI pipeline)
-- Requires API key
+- Used LLM instead of rule-based system for flexibility  
+- Small evaluation dataset due to time constraint  
+- No UI (focused on core functionality)  
+- Confidence score is heuristic, not calibrated  
+
+---
+
+## AI Usage
+
+- Used Groq API (LLaMA 3.1) for review analysis  
+- Used prompt engineering for structured JSON output  
+- Used ChatGPT for debugging and prompt refinement  
+- Used evaluation loop to test model performance  
+
+---
+
+## Time Log
+
+- Problem selection & planning: 1 hour  
+- Implementation: 2 hours  
+- Evaluation & testing: 1 hour  
+- README & documentation: 1 hour  
+- Total: ~5 hours  
 
 ---
 
